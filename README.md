@@ -1,9 +1,6 @@
-# ml-zoomcamp-2024-sales-forecasting
-Time-series daily sales forecasting pipeline comparing Naive Lag-7 Baseline vs Random Forest Regressor.
-
 # 📈 ML Zoomcamp 2024: Time-Series Sales Forecasting
 
-An end-to-end Machine Learning pipeline developed for the ML Zoomcamp 2024 Competition. This project evaluates daily sales forecasting performance by comparing a naive seasonal baseline against a Random Forest Regressor using time-based validation.
+An end-to-end Machine Learning pipeline developed for the ML Zoomcamp 2024. This project evaluates daily sales forecasting performance by comparing a naive seasonal baseline against a Random Forest Regressor using time-based validation.
 
 ---
 
@@ -65,9 +62,9 @@ Models were evaluated over the final 30-day holdout set (2024-08-28 to 2024-09-2
 <img width="1248" height="558" alt="image" src="https://github.com/user-attachments/assets/7194049d-a63c-4653-b436-a256be7a1f4a" />
 
 **Why Did the Simple Baseline Win?**
-**Strong Weekly Seasonality**: The sales curve shows massive 7-day cyclical peaks (e.g., weekend spikes around 2024-09-05, 2024-09-13, and 2024-09-20). Simply copying last week's exact value captures this pattern effortlessly.
-**Recursive Feature Drift**: Multi-step forecasting into the future causes lag features ('lag_1') to rely on previous predictions rather than ground truth, leading error to compound over 30 days.
-**Mid-Month Anomaly Spikes**: Notice the spike on 2024-09-16 in the Random Forest forecast that didn't happen in real life. The model over-predicted based on historical calendar features without promotion or holiday context.
+- **Strong Weekly Seasonality**: The sales curve shows massive 7-day cyclical peaks (e.g., weekend spikes around 2024-09-05, 2024-09-13, and 2024-09-20). Simply copying last week's exact value captures this pattern effortlessly.
+- **Recursive Feature Drift**: Multi-step forecasting into the future causes lag features (`lag_1`) to rely on previous predictions rather than ground truth, leading error to compound over 30 days.
+- **Mid-Month Anomaly Spikes**: Notice the spike on 2024-09-16 in the Random Forest forecast that didn't happen in real life. The model over-predicted based on historical calendar features without promotion or holiday context.
 
 ---
 
